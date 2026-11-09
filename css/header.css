@@ -1,0 +1,123 @@
+.banner {
+    position: relative;
+    height: 540px;
+    overflow: hidden;
+    background-color: #15173A;
+    background-image: url(../img/banner-bg.svg);
+    background-size: cover;
+    background-position: center;
+}
+.banner-art {
+    position: absolute;
+    top: 100px;
+    right: 5%;
+    width: 600px;
+    height: 440px;
+}
+
+.tv {
+    position: absolute;
+    left: 90px;
+    top: 10px;
+    width: 420px;
+    height: 390px;
+    transform: rotate(-8deg);
+}
+.tv-img {
+    width: 420px;
+    transition: all 0.3s;
+}
+.tv-img:hover {
+    transform: scale(1.05);
+}
+
+.press-start {
+    position: absolute;
+    left: 195px;
+    top: 169px;
+    transform: translate(-50%,-50%);
+    font-family: 'Do Hyeon',sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: #15173a;
+}
+
+/*장식 그림*/
+.art {
+    position: absolute;
+}
+.art-sword {
+    left: 20px;
+    top: 40px;
+    width: 64px;
+} 
+.art-sparkle {
+    left: 230px;
+    width: 36px;
+} 
+.art-crosshair {
+    left: 330px;
+    width: 56px;
+} 
+.art-house {
+    left: 500px;
+    top: 10px;
+    width: 56px;
+} 
+.art-star1 {
+    left: 530px;
+    top: 160px;
+    width: 52px;
+} 
+.art-star2 {
+    top: 250px;
+    width: 52px;
+} 
+.art-star3 {
+    left: 140px;
+    top: 380px;
+    width: 40px;
+} 
+.art-star4 {
+    left: 480px;
+    top: 350px;
+    width: 56px;
+} 
+.art-orb {
+    left: 545px;
+    top: 260px;
+    width: 40px;
+}
+
+.bit {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+}
+.bit-1 {
+    left: 80px;
+    top: 150px;
+    background-color: #4bf0c5;
+}
+.bit-2 {
+    left: 440px;
+    top: 60px;
+    background-color: #ff8fb8;
+}
+.bit-3 {
+    left: 60px;
+    top: 340px;
+    background-color: #ffd84d;
+}
+.bit-4 {
+    left: 400px;
+    top: 420px;
+    background-color: #4bf0c5;
+}
+.bit-5 {
+    left: 580px;
+    top: 110px;
+    width: 8px;
+    height: 8px;
+    background-color: #ff8fb8;
+}
