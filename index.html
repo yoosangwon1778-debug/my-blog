@@ -5,16 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>플레이 아카이브 | 게임 기록 블로그</title>
   <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
 
   <header class="banner" id="top">
-    <p class="press-start">LOAD GAME<span class="cursor">_</span></p>
+
+    <div class="banner-art">
+      <div class="tv">
+        <img src="img/monitor.svg" alt="" class="tv-img">
+        <p class="press-start">LOAD GAME<span class="cursor">_</span></p>
+      </div>
+      <img src="img/sword.svg" alt="" class="art art-sword">
+      <img src="img/sparkle.svg" alt="" class="art art-sparkle">
+      <img src="img/crosshair.svg" alt="" class="art art-crosshair">
+      <img src="img/house.svg" alt="" class="art art-house">
+      <img src="img/star-yellow.svg" alt="" class="art art-star1">
+      <img src="img/star-pink.svg" alt="" class="art art-star2">
+      <img src="img/star-yellow.svg" alt="" class="art art-star3">
+      <img src="img/star-pink.svg" alt="" class="art art-star4">
+      <img src="img/orb.svg" alt="" class="art art-orb">
+      <div class="bit bit-1"></div>
+      <div class="bit bit-2"></div>
+      <div class="bit bit-3"></div>
+      <div class="bit bit-4"></div>
+      <div class="bit bit-5"></div>
+    </div>
 
     <nav class="nav">
       <a href="#top" class="logo">💾 플레이 아카이브</a>
       <ul class="nav-links">
+        <li><a href="#now">플레이 중</a></li>
         <li><a href="#posts">최근 기록</a></li>
         <li><a href="#gallery">사진첩</a></li>
         <li><a href="#guest">방명록</a></li>
@@ -31,30 +54,88 @@
 
   <main class="container">
 
+    <!-- 프로필 -->
     <section class="profile">
-      <div class="avatar">🎮</div>
-      <div class="profile-text">
-        <h2>SangWon <span class="level">LV.10</span></h2>
+      <div class="profile-top">
+        <div class="avatar"><img src="img/controller.svg" alt="게임 컨트롤러" class="avatar-img"></div>
+        <div class="profile-text">
+          <h2>SangWon <span class="level">LV.10</span></h2>
+          <p>엔딩은 꼭 보고 마는 장르 가리지 않는 게이머</p>
+          <div class="exp">
+            <span class="exp-label">EXP</span>
+            <div class="bar"><div class="bar-fill fill-72"></div></div>
+            <span class="exp-label">72%</span>
+          </div>
+        </div>
+        <ul class="tags">
+          <li>#RPG</li>
+          <li>#FPS</li>
+          <li>#힐링</li>
+        </ul>
       </div>
-      <ul class="tags">
-        <li>#RPG</li>
-        <li>#FPS</li>
-        <li>#힐링</li>
+      <ul class="profile-stats">
+        <li><strong>1,240</strong><span>총 플레이 시간</span></li>
+        <li><strong>37</strong><span>엔딩 본 게임</span></li>
+        <li><strong>412</strong><span>모은 업적</span></li>
+        <li><strong>3년</strong><span>기록한 기간</span></li>
       </ul>
     </section>
 
+    <!-- 지금 플레이 중 -->
+    <section class="now" id="now">
+      <h2 class="section-title">지금 플레이 중</h2>
+      <div class="now-grid">
+        <article class="now-card">
+          <div class="now-icon"><img src="img/sword.svg" alt=""></div>
+          <div class="now-text">
+            <p class="category">RPG</p>
+            <h3>크리스탈 연대기 2</h3>
+            <div class="bar"><div class="bar-fill fill-35"></div></div>
+            <p class="now-info">메인 스토리 35% · 어제 플레이</p>
+          </div>
+        </article>
+        <article class="now-card">
+          <div class="now-icon"><img src="img/crosshair.svg" alt=""></div>
+          <div class="now-text">
+            <p class="category">FPS</p>
+            <h3>네온 스트라이크</h3>
+            <div class="bar"><div class="bar-fill fill-80"></div></div>
+            <p class="now-info">다이아 승급까지 80% · 오늘 플레이</p>
+          </div>
+        </article>
+        <article class="now-card">
+          <div class="now-icon"><img src="img/house.svg" alt=""></div>
+          <div class="now-text">
+            <p class="category">힐링</p>
+            <h3>포근 마을 이야기</h3>
+            <div class="bar"><div class="bar-fill fill-60"></div></div>
+            <p class="now-info">마을 레벨 6/10 · 3일 전 플레이</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 최근 기록 -->
     <section class="posts" id="posts">
       <h2 class="section-title">최근 기록</h2>
 
       <article class="post">
-        <div class="thumb">
-          <span class="thumb-emoji">⚔️</span>
+        <div class="thumb thumb-rpg">
           <span class="date">11.03</span>
         </div>
         <div class="post-text">
           <p class="category">RPG</p>
           <h3>60시간 만에 드디어 엔딩</h3>
-          <p class="summary">마지막 보스 앞에서 세 번 쓰러지고 겨우 엔딩 크레딧을 봤어요.</p>
+          <p class="summary">마지막 보스 앞에서 세 번 쓰러지고 겨우 엔딩 크레딧 시청</p>
+          <ul class="post-meta">
+            <li>⏱ 60시간</li>
+            <li>★★★★★</li>
+            <li>난이도 어려움</li>
+          </ul>
+          <div class="post-progress">
+            <div class="bar"><div class="bar-fill fill-100"></div></div>
+            <span>엔딩 100%</span>
+          </div>
           <a href="#" class="more">더 읽기 ▶</a>
         </div>
       </article>
@@ -64,44 +145,168 @@
           <p class="category">FPS</p>
           <h3>시즌 마감 하루 전, 목표 랭크 달성</h3>
           <p class="summary">매일 30분씩 한 에임 연습이 드디어 보람이 있었어요.</p>
+          <ul class="post-meta">
+            <li>⏱ 시즌 120시간</li>
+            <li>★★★★☆</li>
+            <li>승률 54%</li>
+          </ul>
+          <div class="post-progress">
+            <div class="bar"><div class="bar-fill fill-100"></div></div>
+            <span>목표 랭크 달성</span>
+          </div>
           <a href="#" class="more">더 읽기 ▶</a>
         </div>
-        <div class="thumb">
-          <span class="thumb-emoji">🎯</span>
+        <div class="thumb thumb-fps">
           <span class="date">10.27</span>
         </div>
       </article>
 
       <article class="post">
-        <div class="thumb">
-          <span class="thumb-emoji">🏡</span>
+        <div class="thumb thumb-village">
           <span class="date">10.15</span>
         </div>
         <div class="post-text">
           <p class="category">힐링</p>
           <h3>작은 마을이 이만큼 커졌다</h3>
           <p class="summary">집 세 채로 시작한 마을에 이제 주민이 20명이에요.</p>
+          <ul class="post-meta">
+            <li>⏱ 85시간</li>
+            <li>★★★★☆</li>
+            <li>난이도 쉬움</li>
+          </ul>
+          <div class="post-progress">
+            <div class="bar"><div class="bar-fill fill-60"></div></div>
+            <span>마을 레벨 6/10</span>
+          </div>
           <a href="#" class="more">더 읽기 ▶</a>
         </div>
       </article>
     </section>
 
+    <!-- 올해의 기록 -->
+    <section class="year" id="year">
+      <h2 class="section-title">2026 플레이 결산</h2>
+      <ul class="year-grid">
+        <li class="year-box">
+          <strong>12</strong>
+          <span>플레이한 게임</span>
+        </li>
+        <li class="year-box">
+          <strong>7</strong>
+          <span>엔딩 본 게임</span>
+        </li>
+        <li class="year-box">
+          <strong>다이아</strong>
+          <span>최고 랭크</span>
+        </li>
+        <li class="year-box highlight">
+          <strong>RPG</strong>
+          <span>가장 많이 한 장르</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 사진첩 -->
     <section class="gallery" id="gallery">
       <h2 class="section-title">사진첩</h2>
       <div class="gallery-grid">
-        <div class="cell cell-a"><span>🏆</span>엔딩 크레딧</div>
-        <div class="cell cell-b"><span>🎯</span>랭크 인증</div>
-        <div class="cell cell-c highlight"><span>🏡</span>커진 마을</div>
-        <div class="cell cell-d"><span>⚔️</span>최종 장비</div>
-        <div class="cell cell-e"><span>🌾</span>첫 수확</div>
+        <div class="cell cell-a"><p class="cell-label">엔딩 크레딧</p></div>
+        <div class="cell cell-b"><p class="cell-label">랭크 인증</p></div>
+        <div class="cell cell-c"><p class="cell-label">커진 마을</p></div>
+        <div class="cell cell-d"><p class="cell-label">최종 장비</p></div>
+        <div class="cell cell-e"><p class="cell-label">첫 수확</p></div>
       </div>
+    </section>
+
+    <!-- 업적 -->
+    <section class="badges" id="badges">
+      <h2 class="section-title">획득한 업적 <span class="count">6 / 8</span></h2>
+      <ul class="badge-grid">
+        <li class="badge">
+          <img src="img/trophy.svg" alt="">
+          <strong>첫 엔딩</strong>
+          <span>처음으로 엔딩 크레딧 보기</span>
+        </li>
+        <li class="badge">
+          <img src="img/swords.svg" alt="">
+          <strong>보스 사냥꾼</strong>
+          <span>보스 50마리 처치</span>
+        </li>
+        <li class="badge">
+          <img src="img/target.svg" alt="">
+          <strong>명사수</strong>
+          <span>헤드샷 1,000회</span>
+        </li>
+        <li class="badge">
+          <img src="img/house.svg" alt="">
+          <strong>마을 이장</strong>
+          <span>주민 20명 모으기</span>
+        </li>
+        <li class="badge">
+          <img src="img/wheat.svg" alt="">
+          <strong>풍년</strong>
+          <span>작물 500개 수확</span>
+        </li>
+        <li class="badge">
+          <img src="img/controller.svg" alt="">
+          <strong>밤샘 게이머</strong>
+          <span>하루 10시간 플레이</span>
+        </li>
+        <li class="badge locked">
+          <p class="lock">?</p>
+          <strong>???</strong>
+          <span>아직 숨겨진 업적</span>
+        </li>
+        <li class="badge locked">
+          <p class="lock">?</p>
+          <strong>???</strong>
+          <span>아직 숨겨진 업적</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 방명록 -->
+    <section class="guest" id="guest">
+      <h2 class="section-title">방명록</h2>
+
+      <form class="guest-form">
+        <label for="guest-name" class="guest-label">닉네임</label>
+        <input type="text" id="guest-name" class="guest-input name" placeholder="닉네임">
+        <label for="guest-msg" class="guest-label">남길 말</label>
+        <input type="text" id="guest-msg" class="guest-input msg" placeholder="한 줄 남기고 가세요!">
+        <button type="submit" class="guest-btn">저장 ▶</button>
+      </form>
+
+      <ul class="guest-list">
+        <li class="guest-item">
+          <div class="guest-head">
+            <strong>퀘스트러버</strong>
+            <span>11.04</span>
+          </div>
+          <p>60시간 엔딩 축하해요! 저도 마지막 보스에서 엄청 막혔어요.</p>
+        </li>
+        <li class="guest-item">
+          <div class="guest-head">
+            <strong>에임연습생</strong>
+            <span>10.28</span>
+          </div>
+          <p>매일 30분 에임 연습 루틴 공유해 주실 수 있나요?</p>
+        </li>
+        <li class="guest-item">
+          <div class="guest-head">
+            <strong>농부킴</strong>
+            <span>10.16</span>
+          </div>
+          <p>주민 20명이라니 부러워요. 마을 꾸미기 팁 기다릴게요 🌾</p>
+        </li>
+      </ul>
     </section>
 
   </main>
 
   <a href="#top" class="top-btn">TOP</a>
 
-  <footer class="footer" id="guest">
+  <footer class="footer">
     <p>© 2026 플레이 아카이브 · 오늘의 기록이 저장되었습니다</p>
   </footer>
 
