@@ -502,3 +502,36 @@
     font-size: 15px;
     color: #c4c6e0;
 }
+
+/*TOP 버튼*/
+.top-btn {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 10;
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    background-color: #4bf0c5;
+    color: #0f1020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Do Hyeon",sans-serif;
+    font-size: 16px;
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+/*푸터*/
+.footer {
+    padding: 28px 24px;
+    background-color: #090a16;
+    border-top: 2px solid #34375e;
+    color: #a4a6c4;
+    text-align: center;
+    font-size: 13px;
+}
