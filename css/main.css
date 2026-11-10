@@ -155,5 +155,100 @@
     color: #a4a6c4;
 }
 
-
+/*최근 기록*/
+.posts {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.post {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 18px;
+    background-color: #1a1c33;
+    border: 2px solid #34375e;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+.post:hover {
+    transform: translateX(6px);
+    border-color: rgba(75, 240, 197, 0.7);
+}
+.thumb {
+    position: relative;
+    width: 300px;
+    height: 180px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #24274a;
+    background-size: cover;
+    background-position: center;
+}
+.thumb-rpg {
+    background-image: url(../img/rpg-ending.svg);
+}
+.thumb-fps {
+    background-image: url(../img/fps.svg);
+}
+.thumb-village {
+    background-image: url(../img/village.svg);
+}
+.date {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 2px 10px;
+    border-radius: 4px;
+    background-color: #4bf0c5;
+    color: #0f1020;
+    font-size: 12px;
+    font-weight: 700;
+}
+.post-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.post-text h3 {
+    font-size: 22px;
+}
+.summary {
+    font-size: 15px;
+    color: #a4a6c4;
+}
+.post-meta {
+    margin-top: 6px;
+    display: flex;
+    gap: 8px;
+    font-size: 13px;
+}
+.post-meta li {
+    padding: 4px 10px;
+    border-radius: 4px;
+    background-color: #24274a;
+    color: #c4c6e0;
+}
+.post-progress {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffd84d;
+}
+.post-progress .bar {
+    width: 240px;
+}
+.more {
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.more:hover {
+    color: #4bf0c5;
+}
 
