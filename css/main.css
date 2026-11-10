@@ -350,3 +350,66 @@
     font-size: 13px;
     font-weight: 700;
 }
+
+/*업적*/
+.badges {
+    padding-top: 80px;
+}
+.count {
+    font-size: 20px;
+    color: #4bf0c5;
+}
+.badge-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 16px;
+}
+
+/*업적 - 배지(해금)*/
+.badge {
+    padding: 22px 12px;
+    background-color: #1a1c33;
+    border: 2px solid #34375e;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+    transition: all 0.2s;
+}
+.badge:hover {
+    transform: scale(1.06);
+    border-color: #ffd84d;
+}
+.badge img {
+    width: 56px;
+    height: 56px;
+}
+.badge strong {
+    font-size: 15px;
+}
+.badge span {
+    font-size: 12px;
+    color: #a4a6c4;
+}
+/* 업적 - 배지(미해금)*/
+.badge.locked {
+    background-color: #13142a;
+    border-style: dashed;
+}
+.badge.locked strong {
+    color: #6e7299;
+}
+.lock {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    background-color: #24274a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Do Hyeon',sans-serif;
+    font-size: 30px;
+    color: #6e7299;
+}
