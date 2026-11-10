@@ -252,3 +252,43 @@
     color: #4bf0c5;
 }
 
+/*플레이 결산*/
+.year {
+    padding-top: 80px;
+}
+.year-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 16px;
+}
+.year-box {
+    padding: 28px 16px;
+    background-color: #1a1c33;
+    border: 2px solid #34375e;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.2s;
+}
+.year-box:hover {
+    transform: scale(1.04);
+}
+.year-box strong {
+    font-family: "Do Hyeon",sans-serif;
+    font-weight: 400;
+    font-size: 44px;
+    color: #4bf0c5;
+}
+.year-box span {
+    font-size: 14px;
+    color: #a4a6c4;
+}
+.year-box.highlight {
+    background-color: #4bf0c5;
+    border-color: #4bf0c5;
+}
+.year-box.highlight strong, .year-box.highlight span{
+    color: #0f1020;
+}
