@@ -1,0 +1,12 @@
+.tv {
+    cursor: pointer;
+}
+.tv-img {
+    transition: all 0.3s;
+}
+.tv.off .tv-img{
+    opacity: 0.35;
+}
+.tv.off .press-start {
+    visibility: hidden;
+}
