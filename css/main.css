@@ -292,3 +292,61 @@
 .year-box.highlight strong, .year-box.highlight span{
     color: #0f1020;
 }
+
+/*사진첩*/
+.gallery {
+    padding-top: 80px;
+}
+.gallery .section-title {
+    margin-bottom: 28px;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 16px;
+    grid-template-rows:150px 150px;
+    grid-template-areas: "a a b c" "d e e c";
+}
+
+.cell {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #24274a;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.2s;
+}
+.cell:hover {
+    transform: translateY(-4px);
+}
+.cell-a {
+    grid-area: a;
+    background-image: url(../img/credits.svg);
+}
+.cell-b {
+    grid-area: b;
+    background-image: url(../img/rank.svg);
+}
+.cell-c {
+    grid-area: c;
+    background-image: url(../img/village-big.svg);
+}
+.cell-d {
+    grid-area: d;
+    background-image: url(../img/gear.svg);
+}
+.cell-e {
+    grid-area: e;
+    background-image: url(../img/harvest.svg);
+}
+.cell-label {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 8px 12px;
+    background-color: rgba(15, 16, 32, 0.75);
+    font-size: 13px;
+    font-weight: 700;
+}
