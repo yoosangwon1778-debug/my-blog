@@ -274,6 +274,7 @@
 }
 .year-box:hover {
     transform: scale(1.04);
+    border-color: rgba(75, 240, 197, 0.7);
 }
 .year-box strong {
     font-family: "Do Hyeon",sans-serif;
@@ -292,7 +293,9 @@
 .year-box.highlight strong, .year-box.highlight span{
     color: #0f1020;
 }
-
+.year-box.highlight:hover {
+    border-color: #ffd84d;
+}
 /*사진첩*/
 .gallery {
     padding-top: 80px;
@@ -316,9 +319,11 @@
     background-size: cover;
     background-position: center;
     transition: all 0.2s;
+    border: 2px solid #34375e;
 }
 .cell:hover {
     transform: translateY(-4px);
+    border-color: rgba(75, 240, 197, 0.7);
 }
 .cell-a {
     grid-area: a;
