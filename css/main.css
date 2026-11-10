@@ -413,3 +413,92 @@
     font-size: 30px;
     color: #6e7299;
 }
+
+/*방명록*/
+.guest {
+    padding: 80px 0 100px;
+}
+.guest-form {
+    padding: 20px;
+    background-color: #1a1c33;
+    border: 2px solid #34375e;
+    border-radius: 10px;
+    display: flex;
+    gap: 12px;
+}
+.guest-label {
+    display: none;
+}
+
+/*방명록 - 입력칸*/
+.guest-input {
+    height: 48px;
+    padding: 0 14px;
+    border: 2px solid #34375e;
+    border-radius: 6px;
+    background-color: #0f1020;
+    color: #ededf7;
+    font-family: "Noto Sans KR",sans-serif;
+    font-size: 15px;
+    transition: all 0.2s;
+}
+.guest-input:focus {
+    border-color: #4bf0c5;
+}
+.guest-input.name {
+    width: 160px;
+}
+.guest-input.msg {
+    flex: 1;
+}
+/*방명록 - 저장버튼*/
+.guest-btn {
+    height: 48px;
+    padding: 0 22px;
+    border-radius: 6px;
+    background-color: #4bf0c5;
+    color: #0f1020;
+    border: none;
+    border-bottom: 4px solid #ff5fa2;
+    font-family: "Noto Sans KR",sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+.guest-btn:hover {
+    border-color: #ffd84d;
+    transform: translate(2px,2px);
+}
+/*방명록 - 글목록*/
+.guest-list {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.guest-item {
+    padding: 16px 20px;
+    background-color: #1a1c33;
+    border-left: 4px solid #4bf0c5;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.guest-head {
+    display: flex;
+    justify-content: space-between;
+}
+.guest-head strong {
+    font-size: 15px;
+    color: #4bf0c5;
+}
+.guest-head span {
+    font-size: 12px;
+    color: #6e7299;
+}
+.guest-item p {
+    font-size: 15px;
+    color: #c4c6e0;
+}
