@@ -164,3 +164,44 @@ a {
 .bit-4 {
   animation-delay: 0.9s;
 }
+
+/*경험치 게이지 바*/
+.bar {
+  height: 8px;
+  border-radius: 4px;
+  background-color: #24274a;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 8px;
+  background-color: #4bf0c5;
+}
+.fill-35 {
+  width: 35%;
+}
+.fill-60 {
+  width: 60%;
+}
+.fill-72 {
+  width: 72%;
+}
+.fill-80 {
+  width: 80%;
+}
+.fill-100 {
+  width: 100%;
+  background-color: #ffd84d;
+}
+
+/*플레이중*/
+.section-title {
+  font-family: 'Do Hyeon',sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+.category {
+  font-size: 13px;
+  font-weight: 700;
+  color: #4bf0c5;
+}

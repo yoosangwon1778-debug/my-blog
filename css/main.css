@@ -1,0 +1,159 @@
+/*프로필*/
+.profile {
+    position: relative;
+    margin-top: -56px;
+    padding: 28px 32px;
+    background-color: #1a1c33;
+    border: 2px solid #34375e;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.profile-top {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/*아바타*/
+.avatar {
+    width: 76px;
+    height: 76px;
+    border-radius: 8px;
+    background-color: #24274a;
+    border: 2px solid #4bf0c5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.avatar-img {
+    width: 52px;
+}
+
+/*프로필 문구*/
+.profile-text {
+    flex: 1;
+}
+.profile-text h2 {
+    font-family: 'Do Hyeon',sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+}
+.level {
+    font-size: 15px;
+    color: #4bf0c5;
+}
+.profile-text p {
+    margin-top: 2px;
+    font-size: 15px;
+    color: #a4a6c4;
+}
+
+/*경험치 줄*/
+.exp {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 340px;
+}
+.exp-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #a4a6c4;
+}
+.exp .bar {
+    flex: 1;
+}
+
+/*태그*/
+.tags {
+    display: flex;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+.tags li {
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: #24274a;
+    color: #4bf0c5;
+}
+
+/*통계*/
+.profile-stats {
+    padding-top: 20px;
+    border-top: 2px solid #34375e;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 16px;
+}
+.profile-stats li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+.profile-stats strong {
+    font-family: 'Do Hyeon',sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #4bf0c5;
+}
+.profile-stats span {
+    font-size: 13px;
+    color: #a4a6c4;
+}
+
+/*지금 플레이 중*/
+.now {
+    padding-top: 80px;
+}
+.now-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 16px;
+}
+.now-card {
+    padding: 18px;
+    background-color: #1a1c33;
+    border: 2px solid #34375e;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.2s;
+}
+.now-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(75, 240, 197, 0.7);
+}
+.now-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    background-color: #24274a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.now-icon img {
+    width: 44px;
+}
+.now-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.now-text h3 {
+    font-size: 17px;
+}
+.now-info {
+    font-size: 12px;
+    color: #a4a6c4;
+}
+
+
+
