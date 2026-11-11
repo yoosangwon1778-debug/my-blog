@@ -29,3 +29,19 @@ expBtn.addEventListener('click', function(){
     expNum.textContent = `${exp}%`;
     levelText.textContent = `LV.${level}`;
 });
+
+/*더 읽기*/
+const posts = document.querySelectorAll('.post');
+for (let i = 0; i < posts.length; i++) {
+    const post = posts[i];
+    const more = post.querySelector('.more');
+    more.addEventListener('click',function(event){
+        event.preventDefault();
+        post.classList.toggle('open');
+        if (post.classList.contains('open')){
+            more.textContent = '접기 ▲';
+        } else {
+            more.textContent = '더 읽기 ▶';
+        }
+    });
+}

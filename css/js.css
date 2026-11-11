@@ -44,3 +44,17 @@
 .exp .bar-fill {
     transition: width 0.3s;
 }
+
+/*더 읽기*/
+.detail {
+    display: none;
+    margin-top: 6px;
+    padding: 12px 14px;
+    border-radius: 6px;
+    background-color: #24274a;
+    font-size: 14px;
+    color: #c4c6e0;
+}
+.post.open .detail {
+    display: block;
+}
