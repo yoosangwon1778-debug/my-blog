@@ -9,3 +9,23 @@ const profile = document.querySelector('.profile');
 avatar.addEventListener('click',function(){
     profile.classList.toggle('fold');
 })
+
+//경험치 올리기 
+const expBtn = document.querySelector('.exp-btn');
+const expFill = document.querySelector('.exp .bar-fill');
+const expNum = document.querySelector('.exp-num');
+const levelText = document.querySelector('.level');
+let exp = 72;
+let level = 10;
+
+expBtn.addEventListener('click', function(){
+    exp += 10;
+    if(exp >= 100) {
+        exp -= 100;
+        level++;
+        alert(`레벨 업! LV.${level}`);
+    }
+    expFill.style.width = `${exp}%`;
+    expNum.textContent = `${exp}%`;
+    levelText.textContent = `LV.${level}`;
+});

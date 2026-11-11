@@ -23,3 +23,24 @@
 .profile.fold .profile-stats {
     display: none;
 }
+
+.exp-btn {
+    margin-top: 10px;
+    padding: 4px 12px;
+    border: 2px solid #4bf0c5;
+    border-radius: 4px;
+    background-color: #1a1c33;
+    color: #4bf0c5;
+    font-family: "Noto Sans KR",sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.exp-btn:hover {
+    background-color: #4bf0c5;
+    color: #0f1020;
+}
+.exp .bar-fill {
+    transition: width 0.3s;
+}
