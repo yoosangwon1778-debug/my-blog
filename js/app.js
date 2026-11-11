@@ -45,3 +45,26 @@ for (let i = 0; i < posts.length; i++) {
         }
     });
 }
+
+/* 사진 크게 보기 */
+const cells = document.querySelectorAll('.cell');
+const lightbox = document.querySelector('.lightbox');
+const lightboximg = document.querySelector('.lightbox-img');
+const lightboxlabel = document.querySelector('.lightbox-label');
+
+for (let i=0; i<cells.length; i++) {
+    const cell = cells[i];
+    cell.addEventListener('click', function(){
+        lightboximg.className = 'lightbox-img ' + cell.classList[1];
+        lightboxlabel.textContent = cell.querySelector('.cell-label').textContent;
+        lightbox.classList.add('open')
+    });
+}
+lightbox.addEventListener('click',function(){
+    lightbox.classList.remove('open');
+})
+
+/*잠긴 업적 해금하기*/
+const lockedBadges = document.querySelectorAll('.badge.locked'); 
+const countText = document.querySelector('.count');
+let badgeCount = 6;  
