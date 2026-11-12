@@ -86,34 +86,44 @@
     <!-- 지금 플레이 중 -->
     <section class="now" id="now">
       <h2 class="section-title">지금 플레이 중</h2>
-      <div class="now-grid">
-        <article class="now-card">
-          <div class="now-icon"><img src="img/sword.svg" alt=""></div>
-          <div class="now-text">
-            <p class="category">RPG</p>
-            <h3>크리스탈 연대기 2</h3>
-            <div class="bar"><div class="bar-fill fill-35"></div></div>
-            <p class="now-info">메인 스토리 35% · 어제 플레이</p>
-          </div>
-        </article>
-        <article class="now-card">
-          <div class="now-icon"><img src="img/crosshair.svg" alt=""></div>
-          <div class="now-text">
-            <p class="category">FPS</p>
-            <h3>네온 스트라이크</h3>
-            <div class="bar"><div class="bar-fill fill-80"></div></div>
-            <p class="now-info">다이아 승급까지 80% · 오늘 플레이</p>
-          </div>
-        </article>
-        <article class="now-card">
-          <div class="now-icon"><img src="img/house.svg" alt=""></div>
-          <div class="now-text">
-            <p class="category">힐링</p>
-            <h3>포근 마을 이야기</h3>
-            <div class="bar"><div class="bar-fill fill-60"></div></div>
-            <p class="now-info">마을 레벨 6/10 · 3일 전 플레이</p>
-          </div>
-        </article>
+      <div class="now-tab">
+        <div class="tab-menu">
+          <button type="button" class="tab active">RPG</button>
+          <button type="button" class="tab">FPS</button>
+          <button type="button" class="tab">힐링</button>
+        </div>
+        <div class="tab-panels">
+          <article class="tab-panel active">
+            <div class="now-icon"><img src="img/sword.svg" alt=""></div>
+            <div class="now-text">
+              <p class="category">RPG</p>
+              <h3>크리스탈 연대기 2</h3>
+              <p class="tab-desc">잃어버린 왕국의 크리스탈 조각을 모으는 중이에요. 다음 목표는 3장 보스!</p>
+              <div class="bar"><div class="bar-fill fill-35"></div></div>
+              <p class="now-info">메인 스토리 35% · 어제 플레이</p>
+            </div>
+          </article>
+          <article class="tab-panel">
+            <div class="now-icon"><img src="img/crosshair.svg" alt=""></div>
+            <div class="now-text">
+              <p class="category">FPS</p>
+              <h3>네온 스트라이크</h3>
+              <p class="tab-desc">새 시즌 시작! 플래티넘에서 다이아까지 한 판 한 판 올라가는 중이에요.</p>
+              <div class="bar"><div class="bar-fill fill-80"></div></div>
+              <p class="now-info">다이아 승급까지 80% · 오늘 플레이</p>
+            </div>
+          </article>
+          <article class="tab-panel">
+            <div class="now-icon"><img src="img/house.svg" alt=""></div>
+            <div class="now-text">
+              <p class="category">힐링</p>
+              <h3>포근 마을 이야기</h3>
+              <p class="tab-desc">이번 주는 꽃 축제 준비 기간. 광장을 꾸밀 꽃씨를 열심히 모으고 있어요.</p>
+              <div class="bar"><div class="bar-fill fill-60"></div></div>
+              <p class="now-info">마을 레벨 6/10 · 3일 전 플레이</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 

@@ -107,3 +107,16 @@
 .badge.new-badge .lock {
     color: #ffd84d;
 }
+
+/*지금 플레이 중 (탭)*/
+.tab.active {
+    background-color: #4bf0c5;
+    border-color: #4bf0c5;
+    color: #0f1020;
+}
+.tab-panel {
+    display: none;
+}
+.tab-panel.active {
+    display: flex;
+}

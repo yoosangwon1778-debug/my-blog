@@ -116,3 +116,17 @@ guestForm.addEventListener('submit', function (event) {
         msginput.value = '';
     }
 })
+
+/*지금 플레이 중 (탭)*/
+const tabs = document.querySelectorAll('.tab');
+const panels = document.querySelectorAll('.tab-panel');
+for(let i=0; i<tabs.length; i++){
+    tabs[i].addEventListener('click',function(){
+        for(let j=0; j<tabs.length; j++){
+            tabs[j].classList.remove('active');
+            panels[j].classList.remove('active');
+        }
+        tabs[i].classList.add('active');
+        panels[i].classList.add('active');
+    })
+}
