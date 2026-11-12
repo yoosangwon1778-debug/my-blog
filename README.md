@@ -34,6 +34,7 @@
 <link rel="stylesheet" href="./css/header.css">
 <link rel="stylesheet" href="./css/main.css">
 <link rel="stylesheet" href="./css/js.css">
+<link rel="stylesheet" href="./css/media.css">
 ```
 
 JS는 `</body>` 바로 위에서 연결함.
@@ -48,6 +49,7 @@ JS는 `</body>` 바로 위에서 연결함.
 | `css/header.css` | 맨 위 배너 |
 | `css/main.css` | 배너 아래 본문 전체 (화면 순서대로) |
 | `css/js.css` | JS가 붙였다 떼는 class의 모양 |
+| `css/media.css` | 반응형 (태블릿 · 폰), 다른 규칙을 덮어써야 해서 맨 뒤 |
 | `js/app.js` | JavaScript 기능 8개 |
 
 ### `style.css` : 공통
@@ -89,3 +91,20 @@ JS는 `</body>` 바로 위에서 연결함.
 | 사진첩 | `.lightbox` 화면 전체 덮개, 숨김 | `.lightbox.open` : 보임 |
 | 업적 | `.badge.locked` 손가락 커서 | `.badge.new-badge` : 노란 테두리와 별 |
 | 탭 | `.tab-panel` 숨김 | `.tab.active` 민트 배경, `.tab-panel.active` 보임 |
+
+### `media.css` : 반응형
+
+데스크톱 CSS를 먼저 만들고 `max-width`로 큰 폭부터 덮어씀 (desktop → mobile). 폰 화면은 1023px 이하이기도 해서 태블릿 블록도 같이 적용됨.
+
+| 구역 | 태블릿 (`max-width: 1023px`) | 폰 (`max-width: 767px`) |
+|---|---|---|
+| 메뉴 · 배너 글자 | 양옆 여백 64 → 40px, 제목 56px, 글자 상자 480px | 로고 · 메뉴 세로, 글자 가운데, 제목 40px |
+| 배너 그림 | `.banner-art` 0.65배로 줄여 오른쪽 끝 | 배너 640px, 그림 0.5배로 글자 아래 가운데 |
+| 프로필 | 그대로 | 세로 가운데, EXP 줄 100%, 통계 2칸 |
+| 플레이 중 탭 | 그대로 | 탭 버튼을 위에 가로로, 내용 높이 자동, 아이콘 · 글 세로 |
+| 최근 기록 | 사진 240px, 진행 바 `flex: 1` | 사진 위 · 글 아래 (2번 글은 `column-reverse`) |
+| 결산 · 업적 | 그대로 | 2칸 |
+| 사진첩 | 그대로 | 2칸, 배치도 `"a a" "b c" "d c" "e e"` |
+| 방명록 | 그대로 | 입력칸 · 버튼 세로 |
+| 사진 크게 보기 | 폭 90%, 높이 360px | 높이 220px |
+| TOP 버튼 · 구역 간격 | 그대로 | TOP 48px 구석으로, 제목 28px, 구역 사이 56px |

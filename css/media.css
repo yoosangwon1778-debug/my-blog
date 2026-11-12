@@ -1,0 +1,230 @@
+@media screen and (max-width:1023px) {
+    .nav {
+        padding: 24px 40px;
+    }
+
+    .hero {
+        padding: 40px 40px 0;
+        max-width: 480px;
+    }
+
+    .hero h1 {
+        font-size: 56px;
+    }
+
+    .banner-art {
+        top: 160px;
+        right: -100px;
+        transform: scale(0.65);
+    }
+
+    .thumb {
+        width: 240px;
+    }
+
+    .post-progress .bar {
+        width: auto;
+        flex: 1;
+    }
+    /*사진 크게 보기*/
+    .lightbox-img {
+        width: 90%;
+        height: 360px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .nav {
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        gap: 16px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 20px 20px 0;
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-desc {
+        font-size: 15px;
+    }
+
+    .banner {
+        height: 640px;
+    }
+
+    .banner-art {
+        top: auto;
+        bottom: -100px;
+        right: auto;
+        left: 50%;
+        margin-left: -300px;
+        transform: scale(0.5);
+    }
+
+
+    /*프로필 반응형*/
+    .profile {
+        padding: 24px 20px;
+    }
+
+    .profile-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .profile-text {
+        width: 100%;
+    }
+
+    .exp {
+        width: 100%;
+    }
+
+    .profile-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /*플레이중 탭 반응형*/
+    .now-tab {
+        flex-direction: column;
+    }
+
+    .tab-menu {
+        width: auto;
+        flex-direction: row;
+    }
+
+    .tab {
+        height: 44px;
+    }
+
+    .tab:nth-child(3) {
+        border-radius: 0 10px 0 0;
+    }
+
+    .tab-panels {
+        height: auto;
+        padding: 24px 20px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .tab-panel {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .now-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .now-icon img {
+        width: 56px;
+    }
+
+    .now-text {
+        width: 100%;
+    }
+
+    .now-text h3 {
+        font-size: 24px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .now,
+    .posts,
+    .year,
+    .gallery,
+    .badges {
+        padding-top: 56px;
+    }
+
+    .guest {
+        padding: 56px 0 80px;
+    }
+
+    .post {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        padding: 14px;
+    }
+
+    .post:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+    .thumb {
+        width: 100%;
+    }
+    .post-text h3 {
+        font-size: 20px;
+    }
+    /*플레이 결산 반응형*/
+    .year-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .year-box strong {
+        font-size: 36px;
+    }
+
+    /*사진 반응형*/
+    .gallery-grid {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 140px 140px 140px 140px;
+        grid-template-areas: "a a" "b c" "d c" "e e";
+        gap: 12px;
+    }
+
+    /*업적 반응형*/
+    .badge-grid {
+        grid-template-columns: repeat(2,1fr);
+        gap: 12px;
+    }
+
+    /*방명록 반응형*/
+    .guest-form {
+        flex-direction: column;
+        padding: 16px;
+    }
+    .guest-input.name {
+        width: auto;
+    }
+    .guest-input.msg {
+        flex: none;
+    }
+    .lightbox-img {
+        height: 220px;
+    }
+    .lightbox-label {
+        font-size: 20px;
+    }
+
+    /*TOP 버튼*/
+    .top-btn {
+        right: 16px;
+        bottom: 16px;
+        width: 48px;
+        height: 48px;
+        font-size: 14px;
+    }
+}
