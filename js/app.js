@@ -68,3 +68,19 @@ lightbox.addEventListener('click',function(){
 const lockedBadges = document.querySelectorAll('.badge.locked'); 
 const countText = document.querySelector('.count');
 let badgeCount = 6;  
+for (let i=0; i<lockedBadges.length; i++){
+    const badge = lockedBadges[i];
+    badge.addEventListener('click',function(){
+        if(badge.classList.contains('locked')){
+            badge.classList.remove('locked');
+            badge.classList.add('new-badge');
+
+            badge.querySelector('.lock').textContent = '★';
+            badge.querySelector('strong').textContent = '새 업적!';
+            badge.querySelector('span').textContent = '방금 해결했어요';
+
+            badgeCount++;
+            countText.textContent = `${badgeCount}/8`;
+        }
+    })
+}
