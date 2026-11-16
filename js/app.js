@@ -120,9 +120,9 @@ guestForm.addEventListener('submit', function (event) {
 /*지금 플레이 중 (탭)*/
 const tabs = document.querySelectorAll('.tab');
 const panels = document.querySelectorAll('.tab-panel');
-for(let i=0; i<tabs.length; i++){
-    tabs[i].addEventListener('click',function(){
-        for(let j=0; j<tabs.length; j++){
+for (let i = 0; i < tabs.length; i++) {
+    tabs[i].addEventListener('click', function () {
+        for (let j = 0; j < tabs.length; j++) {
             tabs[j].classList.remove('active');
             panels[j].classList.remove('active');
         }
@@ -130,3 +130,26 @@ for(let i=0; i<tabs.length; i++){
         panels[i].classList.add('active');
     })
 }
+
+/*모바일 메뉴*/
+const body = document.querySelector('body');
+const mNavBtn = document.querySelector('.mob-nav-btn');
+const navBtns = document.querySelectorAll('.nav-links a');
+
+mNavBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    body.classList.toggle('m-nav-open');
+});
+
+navBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const id = btn.getAttribute('href');
+        const traget = document.querySelector(id);
+        window.scrollTo({
+            top: traget.offsetTop,
+            behavior: 'smooth'
+        });
+        body.classList.remove('m-nav-open');
+    });
+});

@@ -190,3 +190,7 @@
     border-color:#ffd84d;
     transform: translate(2px,2px);
 }
+
+.mob-nav-btn {
+    display: none;
+}
