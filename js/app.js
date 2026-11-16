@@ -154,9 +154,9 @@ navBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
         const id = btn.getAttribute('href');
-        const traget = document.querySelector(id);
+        const target = document.querySelector(id);
         window.scrollTo({
-            top: traget.offsetTop,
+            top: target.offsetTop,
             behavior: 'smooth'
         });
         body.classList.remove('m-nav-open');
