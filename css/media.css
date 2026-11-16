@@ -26,10 +26,15 @@
         width: auto;
         flex: 1;
     }
-    /*사진 크게 보기*/
-    .lightbox-img {
+    /*사진 크게 보기*/ 
+    /*11/16 수정*/
+    .lightbox-swiper {
         width: 90%;
-        height: 360px;
+        height: 460px;
+    }
+    .lightbox-swiper img {
+        width: 80%;
+        height: 340px;
     }
 }
 
@@ -228,8 +233,19 @@
     .guest-input.msg {
         flex: none;
     }
-    .lightbox-img {
-        height: 220px;
+    .lightbox-swiper {
+        width: 100%;
+        height: 400px;
+    }
+    .lightbox-swiper img {
+        height: 260px;
+        padding: 12px;
+    }
+    .lightbox-close {
+        top: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
     }
     .lightbox-label {
         font-size: 20px;

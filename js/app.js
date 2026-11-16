@@ -49,18 +49,27 @@ for (let i = 0; i < posts.length; i++) {
 /* 사진 크게 보기 */
 const cells = document.querySelectorAll('.cell');
 const lightbox = document.querySelector('.lightbox');
-const lightboximg = document.querySelector('.lightbox-img');
-const lightboxlabel = document.querySelector('.lightbox-label');
+const lightboxClose = document.querySelector('.lightbox-close');
+
+const lightboxSwiper = new Swiper ('.lightbox-swiper', {
+    loop: true,
+    navigation: {
+        nextEl: '.lightbox-swiper .swiper-button-next',
+        prevEl: '.lightbox-swiper .swiper-button-prev'
+    },
+    pagination: {
+        el: '.lightbox-swiper .swiper-pagination',
+        clickable:true
+    }
+});
 
 for (let i = 0; i < cells.length; i++) {
-    const cell = cells[i];
-    cell.addEventListener('click', function () {
-        lightboximg.className = 'lightbox-img ' + cell.classList[1];
-        lightboxlabel.textContent = cell.querySelector('.cell-label').textContent;
-        lightbox.classList.add('open')
+    cells[i].addEventListener('click', function() {
+        lightboxSwiper.slideToLoop(i,0);
+        lightbox.classList.add('open');
     });
 }
-lightbox.addEventListener('click', function () {
+lightboxClose.addEventListener('click', function () {
     lightbox.classList.remove('open');
 })
 

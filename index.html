@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>플레이 아카이브 | 게임 기록 블로그</title>
   <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/header.css">
   <link rel="stylesheet" href="./css/main.css">
@@ -325,14 +326,41 @@
 
   </main>
   <div class="lightbox">
-    <div class="lightbox-img"></div>
-    <p class="lightbox-label"></p>
+    <button type="button" class="lightbox-close">✕</button>
+    <div class="swiper lightbox-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="img/credits.svg" alt="엔딩 크레딧 화면">
+          <p class="lightbox-label">엔딩 크레딧</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/rank.svg" alt="S 랭크 메달">
+          <p class="lightbox-label">랭크 인증</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/village-big.svg" alt="언덕을 따라 늘어선 마을">
+          <p class="lightbox-label">커진 마을</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/gear.svg" alt="받침대 위의 검과 방패">
+          <p class="lightbox-label">최종 장비</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/harvest.svg" alt="노을 진 밀밭과 농부">
+          <p class="lightbox-label">첫 수확</p>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
   <a href="#top" class="top-btn">TOP</a>
 
   <footer class="footer">
     <p>© 2026 플레이 아카이브 · 오늘의 기록이 저장되었습니다</p>
   </footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
 <script src="./js/app.js"></script>
 </body>
 </html>
