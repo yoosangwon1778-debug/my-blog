@@ -1,14 +1,76 @@
-# my-blog
+# 플레이 아카이브 (my-blog)
 
-플레이 아카이브 블로그 실습
+RPG · FPS · 힐링 게임을 플레이하며 남긴 기록을 모아 두는 **게임 기록 블로그**. 관심사(게임)로 레이아웃을 바꾸고, HTML · CSS로 화면을 만든 뒤 JavaScript로 기능 9개를 넣음. 태블릿 · 폰 반응형까지 맞춤.
 
-- 사이트 : https://yoosangwon1778-debug.github.io/my-blog/ (GitHub Pages, 지금은 `js` 브랜치로 배포)
+- 사이트 : https://yoosangwon1778-debug.github.io/my-blog/ (GitHub Pages, `main` 브랜치 배포)
+- 저장소 : https://github.com/yoosangwon1778-debug/my-blog
+
+## 실행 방법
+
+**사이트로 보기**: 위 사이트 주소를 열면 됨. 폰으로 열면 폰 화면(햄버거 메뉴)으로 보임.
+
+**내 컴퓨터에서 열기**
+
+```
+git clone https://github.com/yoosangwon1778-debug/my-blog.git
+cd my-blog
+```
+
+1. VS Code로 `my-blog` 폴더를 연다.
+2. `index.html`에서 오른쪽 클릭 → **Open with Live Server** (또는 `index.html`을 브라우저로 바로 열어도 됨).
+3. 반응형 확인: `F12` → `Ctrl + Shift + M`(기기 모드) → 폭을 `1024` · `768` · `375`로 바꿔 봄.
+
+- 글꼴(Google Fonts)과 Swiper는 인터넷 주소(CDN)로 불러와서, 인터넷이 연결돼 있어야 화면이 그대로 나옴.
+- 따로 설치할 것은 없음 (HTML · CSS · JavaScript 파일만 있음).
+
+## 기능 소개
+
+- **JavaScript 기능 9개** : 모니터 켜기 · 끄기, 프로필 통계 접기, EXP 올리기 + 레벨 업, 더 읽기 펼치기, 사진 크게 보기 슬라이더, 잠긴 업적 해금, 방명록 저장, 지금 플레이 중 탭, 모바일 햄버거 메뉴 (아래 표)
+- **반응형** : `@media` `1024px`(태블릿) · `768px`(폰). 폰에서는 가로로 놓인 상자를 세로로 쌓고, 메뉴는 햄버거 버튼으로 바꿈. 가로 스크롤 없음
+- **움직임** : 배너 TV · 장식 그림 `@keyframes`, 카드 · 버튼 hover `transform` + `transition`
+- **메타 태그** : 검색 설명, 카톡 · SNS 미리보기(`og:`), 파비콘, 폰 주소창 색
+
+## 핵심 코드와 이유
+
+**1. 탭 메뉴: 전부 끄고 → 누른 것 하나만 켜기** (`js/app.js`)
+
+```js
+for (let j = 0; j < tabs.length; j++) {
+    tabs[j].classList.remove('active');
+    panels[j].classList.remove('active');
+}
+tabs[i].classList.add('active');
+panels[i].classList.add('active');
+```
+
+어떤 탭이 켜져 있었는지 기억할 필요 없이, 누를 때마다 전부 끄고 누른 번호만 켜면 항상 하나만 켜짐. 탭과 내용이 HTML에서 같은 순서라서 같은 번호 `i`로 짝을 지음.
+
+**2. 햄버거 메뉴: JS는 class만, 모양은 CSS가** (`js/app.js` + `css/media.css`)
+
+```js
+body.classList.toggle('m-nav-open');
+```
+```css
+.nav-links { transform: translateX(110%); opacity: 0; transition: all 0.3s; }
+.m-nav-open .nav-links { transform: translateX(0); opacity: 1; }
+```
+
+JS에서 `style`을 하나하나 바꾸지 않고 `body`에 class 하나만 붙였다 뗌 → 메뉴 · ✕ 버튼 · 배경 색이 CSS에서 한 번에 바뀜. `display: none`에는 transition이 안 먹어서, 화면 밖으로 밀어 두고(`translateX(110%)`) 제자리로 미끄러져 들어오게 함.
+
+**3. 반응형: 데스크톱을 먼저 만들고 큰 폭부터 덮어쓰기** (`css/media.css`)
+
+```css
+@media screen and (max-width:1024px) { /* 태블릿 */ }
+@media screen and (max-width:768px)  { /* 폰 */ }
+```
+
+이미 완성된 데스크톱 CSS를 그대로 두고, 바뀌는 값만 덮어씀. `media.css`를 맨 뒤에 연결해야 같은 선택자일 때 이김. 폰 화면은 1024 이하이기도 해서 태블릿 블록도 같이 적용되므로, 폰 블록은 태블릿 블록 **아래**에 씀.
 
 ## 브랜치
 
-- `main` : `index.html`, `img/`, `README.md`
+- `main` : 최종 결과 (Pages 배포). `js` 브랜치를 fast-forward로 합침
 - `css` : CSS 연습 (단계마다 커밋)
-- `js` : JavaScript 기능 추가 (`css` 브랜치에서 만듦, 기능마다 커밋)
+- `js` : JavaScript 기능 · 반응형 · 메타 태그 (`css` 브랜치에서 만듦, 기능마다 커밋)
 
 ## JavaScript 기능
 
@@ -43,7 +105,7 @@
 | `theme-color` `#0f1020` | 안드로이드 크롬 주소창 색 |
 | `<link rel="icon">` `img/controller.svg` | 브라우저 탭 아이콘 |
 
-`og:image`는 `img/og-image.png`(1200×630)를 전체 주소로 가리킴. 그림 파일은 아직 없음.
+`og:image`는 `img/og-image.png`(1200×630, 배너 캡처)를 `https://`부터 시작하는 전체 주소로 가리킴. 카톡 서버가 직접 가져가야 해서 `./img/...` 같은 상대 경로는 안 됨.
 
 ## CSS 파일 구성
 
@@ -116,9 +178,9 @@ JS는 `</body>` 바로 위에서 연결함.
 
 ### `media.css` : 반응형
 
-데스크톱 CSS를 먼저 만들고 `max-width`로 큰 폭부터 덮어씀 (desktop → mobile). 폰 화면은 1023px 이하이기도 해서 태블릿 블록도 같이 적용됨.
+데스크톱 CSS를 먼저 만들고 `max-width`로 큰 폭부터 덮어씀 (desktop → mobile). 폰 화면은 1024px 이하이기도 해서 태블릿 블록도 같이 적용됨.
 
-| 구역 | 태블릿 (`max-width: 1023px`) | 폰 (`max-width: 767px`) |
+| 구역 | 태블릿 (`max-width: 1024px`) | 폰 (`max-width: 768px`) |
 |---|---|---|
 | 메뉴 · 배너 글자 | 양옆 여백 64 → 40px, 제목 56px, 글자 상자 480px | 로고 왼쪽 · ☰ 오른쪽, 메뉴는 `.nav` 아래 세로 목록으로 화면 밖(`translateX(110%)`)에 숨김 → `.m-nav-open`이면 들어옴 + ✕. 글자 가운데, 제목 40px |
 | 배너 그림 | `.banner-art` 0.65배로 줄여 오른쪽 끝 | 배너 640px, 그림 0.5배로 글자 아래 가운데 |
