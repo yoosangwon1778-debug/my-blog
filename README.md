@@ -86,7 +86,7 @@ JS에서 `style`을 하나하나 바꾸지 않고 `body`에 class 하나만 붙�
 | 6 | 잠긴 업적 해금 | 잠긴 배지 `?` | `locked`를 떼고 `new-badge`를 붙임, `★ 새 업적!`으로 바꾸고 개수 `6 / 8` → `7 / 8` | `classList.remove` · `add`, `badgeCount++` |
 | 7 | 방명록 저장 | `저장 ▶` 버튼 | 닉네임과 남길 말로 새 글을 만들어 목록 맨 위에 넣음, 빈칸이면 알림 | `submit`, `input.value`, `createElement`, `innerHTML`, `prepend` |
 | 8 | 지금 플레이 중 탭 | 왼쪽 탭 RPG / FPS / 힐링 | 탭과 내용을 전부 끄고(`active` 떼기) 누른 번호만 켬 | `for` 두 겹(`i` 바깥, `j` 안쪽), 같은 번호로 탭 ↔ 내용 짝짓기 |
-| 9 | 모바일 햄버거 메뉴 (폰만) | 오른쪽 위 ☰ | `body`에 `m-nav-open`을 붙였다 뗌 → 메뉴가 오른쪽에서 들어오고 ☰가 ✕로 바뀜. 메뉴를 누르면 그 구역으로 부드럽게 스크롤하고 메뉴를 닫음 | 화살표 함수, `forEach`, `getAttribute('href')`, `offsetTop`, `window.scrollTo({ behavior: 'smooth' })` |
+| 9 | 모바일 햄버거 메뉴 (폰만) | 오른쪽 위 ☰ | `body`에 `m-nav-open`을 붙였다 뗌 → 메뉴가 오른쪽에서 들어오고 ☰가 ✕로 바뀜. 메뉴를 누르면 그 구역으로 부드럽게 스크롤하고(고정 메뉴 높이만큼 덜 내려감) 메뉴를 닫음 | 화살표 함수, `forEach`, `getAttribute('href')`, `offsetTop - offsetHeight`, `window.scrollTo({ behavior: 'smooth' })` |
 
 ## 외부 라이브러리
 
@@ -147,10 +147,10 @@ JS는 `</body>` 바로 위에서 연결함.
 
 ### `header.css` : 배너
 
-- `.banner` : 배경 그림, 높이 540px
+- `.banner` : 배경 그림, 높이 636px
 - `.banner-art` : TV(`.tv`, `.press-start`)와 장식 그림(`.art-*`), 픽셀 점(`.bit-*`) 위치
-- `.nav` : 로고와 메뉴, `.mob-nav-btn`(햄버거 버튼, 데스크톱에서는 `display: none`)
-- `.hero` : 문구와 `.btn`(기록 보러 가기 버튼)
+- `.nav` : 로고와 메뉴, `position: fixed`로 화면 맨 위에 고정 (`z-index: 15`, 배경 `rgba(15, 16, 32, 0.95)`). `.mob-nav-btn`(햄버거 버튼, 데스크톱에서는 `display: none`)
+- `.hero` : 문구와 `.btn`(기록 보러 가기 버튼), 고정 메뉴에 가리지 않게 위 padding 168px
 
 ### `main.css` : 본문
 
@@ -183,7 +183,7 @@ JS는 `</body>` 바로 위에서 연결함.
 | 구역 | 태블릿 (`max-width: 1024px`) | 폰 (`max-width: 768px`) |
 |---|---|---|
 | 메뉴 · 배너 글자 | 양옆 여백 64 → 40px, 제목 56px, 글자 상자 480px | 로고 왼쪽 · ☰ 오른쪽, 메뉴는 `.nav` 아래 세로 목록으로 화면 밖(`translateX(110%)`)에 숨김 → `.m-nav-open`이면 들어옴 + ✕. 글자 가운데, 제목 40px |
-| 배너 그림 | `.banner-art` 0.65배로 줄여 오른쪽 끝 | 배너 640px, 그림 0.5배로 글자 아래 가운데 |
+| 배너 그림 | `.banner-art` 0.65배로 줄여 오른쪽 끝 | 배너 680px, 그림 0.5배로 글자 아래 가운데 |
 | 프로필 | 그대로 | 세로 가운데, EXP 줄 100%, 통계 2칸 |
 | 플레이 중 탭 | 그대로 | 탭 버튼을 위에 가로로, 내용 높이 자동, 아이콘 · 글 세로 |
 | 최근 기록 | 사진 240px, 진행 바 `flex: 1` | 사진 위 · 글 아래 (2번 글은 `column-reverse`) |
