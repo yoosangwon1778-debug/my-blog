@@ -1,4 +1,4 @@
-//모니터 ON/OFF
+﻿//모니터 ON/OFF
 const tv = document.querySelector('.tv')
 tv.addEventListener('click', function () {
     tv.classList.toggle('off');
@@ -144,6 +144,7 @@ for (let i = 0; i < tabs.length; i++) {
 const body = document.querySelector('body');
 const mNavBtn = document.querySelector('.mob-nav-btn');
 const navBtns = document.querySelectorAll('.nav-links a');
+const nav = document.querySelector('.nav');
 
 mNavBtn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -156,7 +157,7 @@ navBtns.forEach((btn) => {
         const id = btn.getAttribute('href');
         const target = document.querySelector(id);
         window.scrollTo({
-            top: target.offsetTop,
+            top: target.offsetTop - nav.offsetHeight,
             behavior: 'smooth'
         });
         body.classList.remove('m-nav-open');

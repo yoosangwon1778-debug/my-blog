@@ -1,6 +1,6 @@
 .banner {
     position: relative;
-    height: 540px;
+    height: 636px;
     overflow: hidden;
     background-color: #15173A;
     background-image: url(../img/banner-bg.svg);
@@ -9,7 +9,7 @@
 }
 .banner-art {
     position: absolute;
-    top: 100px;
+    top: 132px;
     right: 5%;
     width: 600px;
     height: 440px;
@@ -124,7 +124,12 @@
 
 /*메뉴*/
 .nav {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 15;
+    background-color: rgba(15, 16, 32, 0.95);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -151,7 +156,7 @@
 .hero {
     position: relative;
     max-width: 600px;
-    padding: 40px 64px 0;
+    padding: 168px 64px 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
